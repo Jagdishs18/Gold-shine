@@ -2,3 +2,9 @@
 # assets/images/*.png
 # assets/images/products/*.jpg
 # assets/images/products/*.png
+
+assets/images/*.jpg
+assets/images/*.png
+
+git add -f assets/images/products/*.jpg
+git add -f assets/images/products/*.png
