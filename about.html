@@ -175,29 +175,738 @@
     </style>
 </head>
 <body>
-    <div class="splash-screen" id="splashScreen"><div class="splash-logo"><div class="splash-text"><h1>GOLD SHINE</h1><p>JEWELRY</p><small>GOLD & DIAMONDS</small></div></div><div class="spinner"></div></div>
+    
+
+<div class="splash-screen" id="splashScreen">
+    <!-- Slow Fog Background -->
+    <div class="fog-background">
+        <div class="fog-layer fog-1"></div>
+        <div class="fog-layer fog-2"></div>
+        <div class="fog-layer fog-3"></div>
+    </div>
+    
+    <!-- Cross Slider Elements -->
+    <div class="cross-slider">
+        <div class="cross-bar cross-horizontal"></div>
+        <div class="cross-bar cross-vertical"></div>
+    </div>
+    
+    <!-- Content - Centered -->
+    <div class="splash-content">
+        <div class="logo-wrapper">
+            <div class="glow-ring"></div>
+            <img src="assets/images/logo.png" alt="Gold Shine Jewelry" class="splash-logo">
+            <div class="logo-shine"></div>
+        </div>
+        <div class="brand-text">
+            <h1 class="gold-text">GOLD SHINE</h1>
+            <h2 class="silver-text">JEWELRY</h2>
+            <div class="diamond-divider">◆ ◆ ◆</div>
+            <p class="tagline">GOLD & DIAMONDS</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Splash Screen Container */
+    .splash-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        overflow: hidden;
+    }
+    
+    /* ========== SLOW FOG BACKGROUND - 3 COLORS ========== */
+    .fog-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: #0a0a0a;
+        overflow: hidden;
+    }
+    
+    .fog-layer {
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.8) 100%);
+        filter: blur(60px);
+        opacity: 0.6;
+    }
+    
+    /* Fog Layer 1 - Deep Purple */
+    .fog-1 {
+        background: radial-gradient(circle at 30% 40%, rgba(88, 28, 135, 0.5), transparent 70%);
+        animation: fogMove1 8s ease-in-out infinite alternate;
+    }
+    
+    /* Fog Layer 2 - Dark Blue */
+    .fog-2 {
+        background: radial-gradient(circle at 70% 60%, rgba(25, 25, 112, 0.5), transparent 70%);
+        animation: fogMove2 10s ease-in-out infinite alternate;
+    }
+    
+    /* Fog Layer 3 - Burgundy/Red */
+    .fog-3 {
+        background: radial-gradient(circle at 50% 50%, rgba(128, 0, 32, 0.4), transparent 70%);
+        animation: fogMove3 12s ease-in-out infinite alternate;
+    }
+    
+    @keyframes fogMove1 {
+        0% {
+            transform: translate(0%, 0%) scale(1);
+            opacity: 0.4;
+        }
+        100% {
+            transform: translate(5%, 5%) scale(1.1);
+            opacity: 0.7;
+        }
+    }
+    
+    @keyframes fogMove2 {
+        0% {
+            transform: translate(0%, 0%) scale(1);
+            opacity: 0.3;
+        }
+        100% {
+            transform: translate(-5%, -5%) scale(1.15);
+            opacity: 0.6;
+        }
+    }
+    
+    @keyframes fogMove3 {
+        0% {
+            transform: translate(0%, 0%) scale(1);
+            opacity: 0.2;
+        }
+        100% {
+            transform: translate(3%, -3%) scale(1.2);
+            opacity: 0.5;
+        }
+    }
+    
+    /* ========== CROSS SLIDER ========== */
+    .cross-slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        pointer-events: none;
+    }
+    
+    /* Horizontal bar */
+    .cross-horizontal {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background: linear-gradient(90deg, 
+            transparent, 
+            #ffffff, 
+            rgba(255, 255, 255, 0.8),
+            transparent
+        );
+        transform: translateY(-50%);
+        animation: slideHorizontal 3s ease-in-out forwards;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    
+    @keyframes slideHorizontal {
+        0% {
+            width: 0%;
+            left: 0;
+        }
+        35% {
+            width: 100%;
+            left: 0;
+        }
+        65% {
+            width: 100%;
+            left: 0;
+        }
+        100% {
+            width: 0%;
+            left: 100%;
+        }
+    }
+    
+    /* Vertical bar */
+    .cross-vertical {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: 0%;
+        background: linear-gradient(180deg, 
+            transparent, 
+            #ffffff, 
+            rgba(255, 255, 255, 0.8),
+            transparent
+        );
+        transform: translateX(-50%);
+        animation: slideVertical 3s ease-in-out forwards;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    
+    @keyframes slideVertical {
+        0% {
+            height: 0%;
+            top: 0;
+        }
+        35% {
+            height: 100%;
+            top: 0;
+        }
+        65% {
+            height: 100%;
+            top: 0;
+        }
+        100% {
+            height: 0%;
+            top: 100%;
+        }
+    }
+    
+    /* ========== CONTENT - CENTERED ========== */
+    .splash-content {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        animation: contentReveal 0.8s ease-out 0.6s both;
+    }
+    
+    @keyframes contentReveal {
+        0% {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    
+    /* Logo Wrapper - Centered */
+    .logo-wrapper {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+    
+    /* Glow Ring */
+    .glow-ring {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 180px;
+        height: 180px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        animation: ringPulse 2.5s ease-out infinite;
+    }
+    
+    @keyframes ringPulse {
+        0% {
+            width: 180px;
+            height: 180px;
+            opacity: 0.8;
+            border-width: 2px;
+        }
+        100% {
+            width: 280px;
+            height: 280px;
+            opacity: 0;
+            border-width: 1px;
+        }
+    }
+    
+    /* Logo - Centered */
+    .splash-logo {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        border: 3px solid rgba(255, 255, 255, 0.8);
+        object-fit: cover;
+        background: #0a0a0a;
+        position: relative;
+        z-index: 2;
+        animation: logoGlow 2s ease-in-out infinite alternate;
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    }
+    
+    @keyframes logoGlow {
+        0% {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            transform: scale(1);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        100% {
+            box-shadow: 0 0 60px rgba(255, 255, 255, 0.5);
+            transform: scale(1.03);
+            border-color: rgba(255, 255, 255, 1);
+        }
+    }
+    
+    .logo-shine {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, 
+            transparent, 
+            rgba(255, 255, 255, 0.3), 
+            transparent
+        );
+        border-radius: 50%;
+        animation: shine 2.5s ease-in-out infinite;
+        pointer-events: none;
+    }
+    
+    @keyframes shine {
+        0% {
+            left: -100%;
+        }
+        100% {
+            left: 200%;
+        }
+    }
+    
+    /* Text Styles */
+    .gold-text {
+        font-size: 42px;
+        font-weight: bold;
+        color: #ffffff;
+        letter-spacing: 5px;
+        font-family: 'Cormorant Garamond', serif;
+        margin: 0;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    
+    .silver-text {
+        font-size: 24px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.9);
+        letter-spacing: 4px;
+        font-family: 'Cormorant Garamond', serif;
+        margin: 10px 0;
+    }
+    
+    .diamond-divider {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        letter-spacing: 8px;
+        margin: 15px 0;
+        animation: pulse 1.5s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% {
+            opacity: 0.4;
+        }
+        50% {
+            opacity: 1;
+        }
+    }
+    
+    .tagline {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 11px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+        .splash-logo {
+            width: 130px;
+            height: 130px;
+        }
+        
+        .glow-ring {
+            width: 150px;
+            height: 150px;
+        }
+        
+        @keyframes ringPulse {
+            0% {
+                width: 150px;
+                height: 150px;
+            }
+            100% {
+                width: 240px;
+                height: 240px;
+            }
+        }
+        
+        .gold-text {
+            font-size: 32px;
+            letter-spacing: 3px;
+        }
+        
+        .silver-text {
+            font-size: 20px;
+            letter-spacing: 3px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .splash-logo {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .glow-ring {
+            width: 120px;
+            height: 120px;
+        }
+        
+        @keyframes ringPulse {
+            0% {
+                width: 120px;
+                height: 120px;
+            }
+            100% {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        
+        .gold-text {
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+        
+        .silver-text {
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+        
+        .diamond-divider {
+            font-size: 10px;
+            letter-spacing: 5px;
+        }
+        
+        .tagline {
+            font-size: 8px;
+            letter-spacing: 3px;
+        }
+    }
+</style>
+
+<script>
+    // Remove splash screen after 3 seconds
+    setTimeout(function() {
+        const splashScreen = document.getElementById('splashScreen');
+        if (splashScreen) {
+            splashScreen.style.transition = 'opacity 0.5s ease';
+            splashScreen.style.opacity = '0';
+            setTimeout(function() {
+                if (splashScreen.parentNode) {
+                    splashScreen.parentNode.removeChild(splashScreen);
+                }
+            }, 500);
+        }
+    }, 3000);
+    
+    // Fade in main content
+    document.addEventListener('DOMContentLoaded', function() {
+        const mainContent = document.querySelector('main, .main-content, body > :not(.splash-screen)');
+        if (mainContent) {
+            mainContent.style.opacity = '0';
+            mainContent.style.transition = 'opacity 0.8s ease-in-out';
+            setTimeout(function() {
+                mainContent.style.opacity = '1';
+            }, 3200);
+        }
+    });
+</script>
+
+
+
     <div class="main-content" id="mainContent">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo-area">
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/logo.png" height="40" alt="Gold Shine Logo" onerror="this.style.display='none'">
-                        <span class="brand-name-text">GOLD SHINE <span>JEWELRY</span></span>
-                    </a>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="collections.html">Collections</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
-        </nav>
+       
+
+                <nav>
+  <div class="nav-container">
+    <!-- LOGO - Left side -->
+    <a href="index.html" class="logo">
+      <img src="assets/images/logo.png" alt="Logo">
+    </a>
+
+    <!-- GOLD SHINE JEWELRY TEXT -->
+    <div class="nav-title">
+      <span>GOLD SHINE <span>JEWELRY</span></span>
+    </div>
+
+    <!-- HAMBURGER MENU - Right side (visible only on mobile) -->
+    <button id="menu-toggle">&#9776;</button>
+
+    <!-- NAV LINKS -->
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="collections.html">Collections</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  nav {
+    background: #0a0a0a;
+    border-bottom: 2px solid #B48F4C;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-height: 80px;
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 80px;
+  }
+
+  /* Logo - Left side */
+  .logo {
+    flex-shrink: 0;
+    z-index: 10;
+  }
+  
+  .logo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 3px solid #B48F4C;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+
+  /* Title - Desktop: left side after logo */
+  .nav-title {
+    flex: 1;
+    margin-left: 15px;
+  }
+  
+  .nav-title span {
+    color: #B48F4C;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  .nav-title span span {
+    color: #D4AF6A;
+  }
+
+  /* Menu toggle button - Hidden on desktop */
+  #menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    flex-shrink: 0;
+    z-index: 10;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+  }
+  
+  #menu-toggle:hover {
+    color: #B48F4C;
+  }
+
+  /* Navigation Links - Desktop */
+  #nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    flex-shrink: 0;
+  }
+  
+  #nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  #nav-links li a:hover {
+    color: #B48F4C;
+  }
+
+  /* ========== MOBILE RESPONSIVE (≤768px) ========== */
+  @media (max-width: 768px) {
+    .nav-container {
+      padding: 0 15px;
+    }
+
+    /* Show hamburger menu on mobile */
+    #menu-toggle {
+      display: block;
+    }
+
+    /* Adjust logo size for mobile */
+    .logo img {
+      height: 50px;
+      width: 50px;
+    }
+
+    /* Title becomes centered on mobile */
+    .nav-title {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-left: 0;
+      text-align: center;
+      flex: none;
+    }
+    
+    .nav-title span {
+      font-size: 18px;
+    }
+
+    /* Hide desktop navigation by default on mobile */
+    #nav-links {
+      display: none;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+      background: #0a0a0a;
+      border-top: 2px solid #B48F4C;
+      border-bottom: 2px solid #B48F4C;
+      z-index: 999;
+    }
+
+    /* Show when 'show' class is toggled */
+    #nav-links.show {
+      display: flex;
+    }
+
+    /* Style mobile menu items */
+    #nav-links li {
+      text-align: center;
+      border-bottom: 1px solid rgba(180, 143, 76, 0.2);
+    }
+    
+    #nav-links li:last-child {
+      border-bottom: none;
+    }
+    
+    #nav-links li a {
+      display: block;
+      padding: 15px 20px;
+      font-size: 16px;
+    }
+    
+    #nav-links li a:hover {
+      background: rgba(180, 143, 76, 0.1);
+    }
+  }
+
+  /* Small mobile devices (below 480px) */
+  @media (max-width: 480px) {
+    .nav-title span {
+      font-size: 18px;
+    }
+    
+    .logo img {
+      height: 45px;
+      width: 45px;
+    }
+    
+    #menu-toggle {
+      font-size: 28px;
+    }
+  }
+
+  /* Tablet view (769px - 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .nav-title span {
+      font-size: 20px;
+    }
+    
+    #nav-links {
+      gap: 20px;
+    }
+    
+    #nav-links li a {
+      font-size: 18px;
+    }
+  }
+</style>
+
+<script>
+  // Hamburger menu toggle functionality
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  // Close menu when clicking a link (better UX)
+  const navItems = document.querySelectorAll('#nav-links a');
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (event) => {
+    const isClickInsideNav = navLinks.contains(event.target);
+    const isClickOnToggle = menuToggle.contains(event.target);
+    
+    if (!isClickInsideNav && !isClickOnToggle && navLinks.classList.contains('show')) {
+      navLinks.classList.remove('show');
+    }
+  });
+</script>
 
         <section class="page-header">
             <div class="container">

@@ -1,21 +1,24 @@
+<nav style="background: #0a0a0a; border-bottom: 2px solid #B48F4C; position: sticky; top: 0; z-index: 1000; height: 80px;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; position: relative; height: 100%;">
 
-
-<nav style="background: #0a0a0a; border-bottom: 2px solid #B48F4C; padding: 15px 0; position: sticky; top: 0; z-index: 1000;">
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-    
-    <a href="index.html">
-      <img src="assets/images/logo.png" height="40" alt="Logo">
+    <!-- LOGO (half above, half below nav) -->
+    <a href="index.html" style="position: absolute; top: 50%; transform: translateY(-50%); left: 20px;">
+      <img src="assets/images/logo.png" alt="Logo" style="height: 80px; width: 80px; border-radius: 50%; border: 3px solid #B48F4C; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
     </a>
 
-    <!-- GOLD TEXT - EXPLICIT COLOR -->
-    <div style="text-align: center;">
+    <!-- GOLD SHINE JEWELRY TEXT -->
+    <div style="text-align: center; flex: 1;">
       <span style="color: #B48F4C; font-size: 28px; font-weight: bold; font-family: 'Cormorant Garamond', serif;">
         GOLD SHINE 
         <span style="color: #D4AF6A;">JEWELRY</span>
       </span>
     </div>
 
-    <ul style="display: flex; gap: 25px; list-style: none; margin: 0; padding: 0;">
+    <!-- HAMBURGER MENU BUTTON (mobile) -->
+    <button id="menu-toggle" style="display: none; background: none; border: none; color: white; font-size: 28px; cursor: pointer;">&#9776;</button>
+
+    <!-- NAV LINKS -->
+    <ul id="nav-links" style="display: flex; gap: 25px; list-style: none; margin: 0; padding: 0;">
       <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
       <li><a href="about.html" style="color: white; text-decoration: none;">About Us</a></li>
       <li><a href="collections.html" style="color: white; text-decoration: none;">Collections</a></li>
@@ -27,10 +30,51 @@
 </nav>
 
 <style>
-  @media (max-width: 768px) {
-    nav > div { flex-direction: column; gap: 15px; }
-    nav ul { flex-wrap: wrap; justify-content: center; }
-    nav div span { font-size: 22px !important; }
-  }
   nav ul li a:hover { color: #B48F4C !important; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    #menu-toggle { display: block; }
+
+    #nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      margin-top: 10px;
+      background: #0a0a0a;
+      padding: 10px 0;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      border-bottom: 2px solid #B48F4C;
+      z-index: 999;
+    }
+
+    #nav-links.show {
+      display: flex;
+    }
+
+    nav > div {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    nav div span { font-size: 22px !important; }
+
+    nav a img {
+      height: 60px;
+      width: 60px;
+    }
+  }
 </style>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
