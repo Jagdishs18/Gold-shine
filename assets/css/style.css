@@ -116,57 +116,7 @@ h1, h2, h3, h4, .logo-text, .nav-links a, .hero-title {
     opacity: 1;
 }
 
-/* ========== NAVBAR ========== */
-/* .navbar {
-    background: rgba(10, 10, 10, 0.96);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(180, 143, 76, 0.3);
-    padding: 16px 0;
-}
 
-.nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: relative;
-}
-
-
-
-.logo-area {
-    flex: 1;
-}
-
-.logo {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-img {
-    height: 50px;
-    width: auto;
-}
-
-.logo-text {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--gold);
-    letter-spacing: 2px;
-}
-
-.logo-text small {
-    font-size: 0.8rem;
-    display: block;
-    color: #b9b9b9;
-    letter-spacing: 3px;
-    font-family: 'Inter', sans-serif;
-} */
 
 /* ========== NAVBAR - LOGO + NAME ON LEFT ========== */
 .navbar {
