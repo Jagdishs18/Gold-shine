@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Gold Shine Jewelry</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Updated collection cards */
+        .collection-card {
+            height: 400px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .collection-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 35px rgba(0,0,0,0.4);
+        }
+        .collection-card.gold { background: linear-gradient(135deg, #1a1a1a 0%, #2a1a0a 100%); border: 1px solid rgba(180,143,76,0.3); }
+        .collection-card.silver { background: linear-gradient(135deg, #1a1a1a 0%, #1a1a2a 100%); border: 1px solid rgba(180,143,76,0.3); }
+        .collection-card.diamond { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a3a 100%); border: 1px solid rgba(180,143,76,0.3); }
+        .collection-card.bridal { background: linear-gradient(135deg, #1a0a0a 0%, #2a0a1a 100%); border: 1px solid rgba(180,143,76,0.3); }
+        .collection-card.platinum { background: linear-gradient(135deg, #1a1a2a 0%, #0a0a3a 100%); border: 1px solid rgba(180,143,76,0.3); }
+        .collection-card.antique { background: linear-gradient(135deg, #2a1a0a 0%, #1a0a0a 100%); border: 1px solid rgba(180,143,76,0.3); }
+        .collection-card.kids { background: linear-gradient(135deg, #1a2a1a 0%, #0a1a0a 100%); border: 1px solid rgba(180,143,76,0.3); }
+        .collection-card.mens { background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); border: 1px solid rgba(180,143,76,0.3); }
+        
+        .collection-icon {
+            font-size: 4rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        .collection-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            background: rgba(0,0,0,0.75);
+            transition: all 0.3s ease;
+        }
+        .collection-card:hover .collection-overlay {
+            background: rgba(0,0,0,0.85);
+        }
+        .collection-overlay h2 {
+            color: var(--gold);
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+        .collection-overlay p {
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        @media (max-width: 768px) {
+            .collections-grid {
+                grid-template-columns: 1fr;
+            }
+            .collection-card {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="splash-screen" id="splashScreen"><div class="splash-logo"><div class="splash-text"><h1>GOLD SHINE</h1><p>JEWELRY</p><small>GOLD & DIAMONDS</small></div></div><div class="spinner"></div></div>
+    <div class="main-content" id="mainContent">
+
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo-area">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" height="40" alt="Gold Shine Logo" onerror="this.style.display='none'">
+                        <span class="brand-name-text">GOLD SHINE <span>JEWELRY</span></span>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+        
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Collections</h1>
+                <p>Discover jewellery that defines your elegance</p>
+            </div>
+        </section>
+        
+        <section class="container">
+            <div class="collections-grid">
+                <!-- 1. Gold Collection -->
+                <div class="collection-card gold" data-aos="flip-left" onclick="window.location.href='products.html?category=Gold'">
+                    <div class="collection-overlay">
+                        <i class="fas fa-crown collection-icon"></i>
+                        <h2>Gold Collection</h2>
+                        <p>18K & 22K pure gold jewellery</p>
+                        <a href="products.html?category=Gold" class="btn-gold-outline">Explore Gold</a>
+                    </div>
+                </div>
+                
+                <!-- 2. Silver Collection -->
+                <div class="collection-card silver" data-aos="flip-left" data-aos-delay="100" onclick="window.location.href='products.html?category=Silver'">
+                    <div class="collection-overlay">
+                        <i class="fas fa-ring collection-icon"></i>
+                        <h2>Silver Collection</h2>
+                        <p>Exquisite silver craftsmanship</p>
+                        <a href="products.html?category=Silver" class="btn-gold-outline">Explore Silver</a>
+                    </div>
+                </div>
+                
+                <!-- 3. Diamond Collection -->
+                <div class="collection-card diamond" data-aos="flip-left" data-aos-delay="200" onclick="window.location.href='products.html?category=Diamond'">
+                    <div class="collection-overlay">
+                        <i class="fas fa-gem collection-icon"></i>
+                        <h2>Diamond Collection</h2>
+                        <p>Certified natural diamonds</p>
+                        <a href="products.html?category=Diamond" class="btn-gold-outline">Explore Diamonds</a>
+                    </div>
+                </div>
+                
+                <!-- 4. Bridal Collection -->
+                <div class="collection-card bridal" data-aos="flip-left" data-aos-delay="300" onclick="window.location.href='products.html?category=Bridal'">
+                    <div class="collection-overlay">
+                        <i class="fas fa-heart collection-icon"></i>
+                        <h2>Bridal Collection</h2>
+                        <p>For your special day</p>
+                        <a href="products.html?category=Bridal" class="btn-gold-outline">Explore Bridal</a>
+                    </div>
+                </div>
+                
+                <!-- 5. Platinum Collection -->
+                <div class="collection-card platinum" data-aos="flip-left" data-aos-delay="400" onclick="window.location.href='products.html?category=Platinum'">
+                    <div class="collection-overlay">
+                        <i class="fas fa-star-of-life collection-icon"></i>
+                        <h2>Platinum Collection</h2>
+                        <p>Rare & precious platinum jewellery</p>
+                        <a href="products.html?category=Platinum" class="btn-gold-outline">Explore Platinum</a>
+                    </div>
+                </div>
+                
+                <!-- 6. Antique Collection -->
+                <div class="collection-card antique" data-aos="flip-left" data-aos-delay="500" onclick="window.location.href='products.html?category=Antique'">
+                    <div class="collection-overlay">
+                        <i class="fas fa-landmark collection-icon"></i>
+                        <h2>Antique Collection</h2>
+                        <p>Heritage & vintage inspired designs</p>
+                        <a href="products.html?category=Antique" class="btn-gold-outline">Explore Antique</a>
+                    </div>
+                </div>
+
+                <!-- 7. NEW: Kids Collection -->
+                <div class="collection-card kids" data-aos="flip-left" data-aos-delay="600" onclick="window.location.href='products.html?category=Kids'">
+                    <div class="collection-overlay">
+                        <i class="fas fa-child collection-icon"></i>
+                        <h2>Kids Collection</h2>
+                        <p>Adorable jewellery for little ones</p>
+                        <a href="products.html?category=Kids" class="btn-gold-outline">Explore Kids</a>
+                    </div>
+                </div>
+
+                <!-- 8. NEW: Men's Collection -->
+                <div class="collection-card mens" data-aos="flip-left" data-aos-delay="700" onclick="window.location.href='products.html?category=Mens'">
+                    <div class="collection-overlay">
+                        <i class="fas fa-male collection-icon"></i>
+                        <h2>Men's Collection</h2>
+                        <p>Bold & masculine designs</p>
+                        <a href="products.html?category=Mens" class="btn-gold-outline">Explore Men's</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <a href="https://wa.me/918147128889" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <h4>Gold Shine Jewelry</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> No.210/4, samad complex, 80 Feet Rd, next to core computer care, 3rd Block, HBR Layout, Bengaluru, Karnataka 560043</p>
+                        <p><i class="fas fa-phone-alt"></i> +91 80 1234 5678</p>
+                        <p><i class="fas fa-envelope"></i> shine@goldshine.com</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <p><a href="about.html">About Us</a></p>
+                        <p><a href="collections.html">Collections</a></p>
+                        <p><a href="gallery.html">Gallery</a></p>
+                        <p><a href="contact.html">Contact</a></p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Policies</h4>
+                        <p><a href="privacy.html">Privacy Policy</a></p>
+                        <p><a href="terms.html">Terms & Conditions</a></p>
+                        <p><a href="shipping.html">Shipping Policy</a></p>
+                        <p><a href="refund.html">Refund Policy</a></p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Store Hours</h4>
+                        <p>Open daily: 10:30 AM – 8:30 PM</p>
+                        <p>Sunday: 11 AM – 6 PM</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">© 2025 Gold Shine Jewelry – Timeless Elegance</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>

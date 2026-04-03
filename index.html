@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Shine Jewelry - Luxury Gold & Diamonds</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="splash-screen" id="splashScreen">
+        <div class="splash-logo">
+            <img src="assets/images/logo.png" alt="Gold Shine" class="splash-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <div class="splash-text">
+                <h1>GOLD SHINE</h1>
+                <p>JEWELRY</p>
+                <small>GOLD & DIAMONDS</small>
+            </div>
+        </div>
+        <div class="spinner"></div>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo-area">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" height="40" alt="Gold Shine Logo" onerror="this.style.display='none'">
+                        <span class="brand-name-text">GOLD SHINE <span>JEWELRY</span></span>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content" data-aos="fade-up">
+                <h1>Where Luxury Shines</h1>
+                <p>Discover handcrafted gold & diamond masterpieces that celebrate your legacy.</p>
+                <a href="products.html" class="btn-gold">Explore Collection</a>
+            </div>
+        </section>
+
+        <!-- Brand Trust Badges -->
+        <section class="container" data-aos="fade-up">
+            <div class="trust-badges">
+                <div class="trust-item">
+                    <i class="fas fa-certificate"></i>
+                    <span>BIS Hallmarked</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-gem"></i>
+                    <span>100% Natural Diamonds</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-truck"></i>
+                    <span>Free Insured Shipping</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Lifetime Exchange</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Certified Authenticity</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Collections -->
+        <section class="container" data-aos="fade-up">
+            <h2 class="section-title">Featured Collections</h2>
+            <div class="products-grid" id="featured-products"></div>
+        </section>
+
+        <!-- Special Offers / Banner -->
+        <section class="offer-banner" data-aos="zoom-in">
+            <div class="container offer-content">
+                <h3>Limited Time Offer</h3>
+                <h2>Up to 30% Off on Diamond Jewellery</h2>
+                <p>Free Gift wrapping & Lifetime maintenance included</p>
+                <a href="products.html" class="btn-gold">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="container" data-aos="fade-up">
+            <h2 class="section-title">Why Choose Gold Shine?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-hand-sparkles"></i>
+                    <h3>Handcrafted Excellence</h3>
+                    <p>Each piece crafted by master artisans with 50+ years of combined experience</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Price Transparency</h3>
+                    <p>Live gold rates | No hidden charges | Best price guaranteed</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Expert Consultation</h3>
+                    <p>Personalized styling advice from our jewellery experts</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-gift"></i>
+                    <h3>Custom Designs</h3>
+                    <p>Create your dream jewellery with our custom design service</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Latest Arrivals -->
+        <section class="container" data-aos="fade-up">
+            <h2 class="section-title">Latest Arrivals</h2>
+            <div class="products-grid" id="latest-products"></div>
+            <div class="view-all-container">
+                <a href="products.html" class="btn-gold-outline">View All Products <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials" data-aos="fade-up">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <p>"Absolutely stunning piece! The diamond ring exceeded my expectations. The craftsmanship is impeccable. Thank you Gold Shine!"</p>
+                        <h4>- Priya Sharma</h4>
+                        <span>Verified Buyer</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <p>"Best jewellery shopping experience ever. The team was very helpful and the quality is outstanding. Highly recommended!"</p>
+                        <h4>- Rajesh Mehta</h4>
+                        <span>Verified Buyer</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <p>"The bridal collection is breathtaking! Got my wedding jewellery from here and received so many compliments."</p>
+                        <h4>- Anjali Nair</h4>
+                        <span>Verified Buyer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter" data-aos="fade-up">
+            <div class="container newsletter-content">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Get exclusive offers, new collection alerts, and jewellery care tips</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe <i class="fas fa-paper-plane"></i></button>
+                </form>
+                <p class="newsletter-note">✨ Get 10% off on your first purchase when you subscribe</p>
+            </div>
+        </section>
+
+        <!-- Instagram Feed / Social Proof -->
+        <section class="instagram-feed" data-aos="fade-up">
+            <div class="container">
+                <h2 class="section-title">Follow Us @GoldShineJewelry</h2>
+                <div class="instagram-grid">
+                    <div class="insta-item"><i class="fab fa-instagram"></i><span>#GoldShineLuxury</span></div>
+                    <div class="insta-item"><i class="fab fa-instagram"></i><span>#DiamondDreams</span></div>
+                    <div class="insta-item"><i class="fab fa-instagram"></i><span>#BridalElegance</span></div>
+                    <div class="insta-item"><i class="fab fa-instagram"></i><span>#GoldMoments</span></div>
+                </div>
+            </div>
+        </section>
+
+        <a href="https://wa.me/918147128889?text=Hello%20Gold%20Shine%20Jewellers" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <h4>Gold Shine Jewelry</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> No.210/4, samad complex, 80 Feet Rd, next to core computer care, 3rd Block, HBR Layout, Bengaluru, Karnataka 560043</p>
+                        <p><i class="fas fa-phone-alt"></i> +91 80 1234 5678</p>
+                        <p><i class="fas fa-envelope"></i> shine@goldshine.com</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <p><a href="about.html">About Us</a></p>
+                        <p><a href="collections.html">Collections</a></p>
+                        <p><a href="gallery.html">Gallery</a></p>
+                        <p><a href="contact.html">Contact</a></p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Policies</h4>
+                        <p><a href="privacy.html">Privacy Policy</a></p>
+                        <p><a href="terms.html">Terms & Conditions</a></p>
+                        <p><a href="shipping.html">Shipping Policy</a></p>
+                        <p><a href="refund.html">Refund Policy</a></p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Store Hours</h4>
+                        <p>Open daily: 10:30 AM – 8:30 PM</p>
+                        <p>Sunday: 11 AM – 6 PM</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">© 2025 Gold Shine Jewelry – Timeless Elegance</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Featured products
+
+
+      const featuredProducts = [
+    { id: 1, name: "18K Gold Necklace", price: "₹2,450", image: "assets/images/products/img1.jpg" },
+    { id: 2, name: "Diamond Solitaire Ring", price: "₹4,200", image: "assets/images/products/img2.jpg" },
+    { id: 3, name: "Bridal Choker Set", price: "₹6,750", image: "assets/images/products/img4.jpg" },
+    { id: 4, name: "Gold Earrings", price: "₹1,890", image: "assets/images/products/img5.jpg" },
+    { id: 5, name: "Diamond Pendant", price: "₹3,150", image: "assets/images/products/img6.jpg" },
+    { id: 6, name: "Gold Bangle Set", price: "₹3,800", image: "assets/images/products/img7.jpg" },
+];
+
+const latestProducts = [
+    { id: 7, name: "Silver Anklets", price: "₹180", image: "assets/images/products/silver-bracelet.jpg" },
+    { id: 8, name: "Silver Bracelet", price: "₹320", image: "assets/images/products/silver-anklets.jpg" },
+    { id: 9, name: "Platinum Diamond Band", price: "₹5,500", category: "Diamond", image: "assets/images/products/platinum-band.jpg", desc: "Platinum diamond band with 0.8 carat total weight. Perfect wedding band for modern couples." },
+    { id: 10, name: "Gold Temple Necklace", price: "₹8,900", category: "Gold", image: "assets/images/products/temple-necklace.jpg", desc: "Traditional South Indian temple necklace with intricate deity motifs. 22K pure gold." },
+    { id: 11, name: "Emerald Gold Ring", price: "₹3,200", category: "Gold", image: "assets/images/products/emerald-ring.jpg", desc: "Stunning emerald stone set in 18K gold with diamond accents. Weight: 8g." },
+    { id: 12, name: "Bridal Matha Patti", price: "₹2,800", category: "Bridal", image: "assets/images/products/matha-patti.jpg", desc: "Traditional bridal matha patti (headpiece) with kundan work and pearls. Perfect for wedding day." }
+];
+
+
+        
+        function renderProducts(containerId, products) {
+            const container = document.getElementById(containerId);
+            if(container) {
+                container.innerHTML = products.map(p => `
+                    <div class="product-card" onclick="window.location.href='product-detail.html?id=${p.id}'">
+                        <img class="product-img" src="${p.image}" alt="${p.name}" onerror="this.src='https://placehold.co/600x800/2a2a2a/B48F4C?text=${encodeURIComponent(p.name)}'">
+                        <div class="product-info">
+                            <div class="product-title">${p.name}</div>
+                            <div class="product-price">${p.price}</div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        }
+        
+        renderProducts('featured-products', featuredProducts);
+        renderProducts('latest-products', latestProducts);
+        
+        // Newsletter form
+        const newsletterForm = document.getElementById('newsletterForm');
+        if(newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input').value;
+                alert(`Thank you for subscribing! ✨\n10% discount code: GOLD10 will be sent to ${email}`);
+                this.reset();
+            });
+        }
+    </script>
+</body>
+</html>

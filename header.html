@@ -1,0 +1,36 @@
+
+
+<nav style="background: #0a0a0a; border-bottom: 2px solid #B48F4C; padding: 15px 0; position: sticky; top: 0; z-index: 1000;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+    
+    <a href="index.html">
+      <img src="assets/images/logo.png" height="40" alt="Logo">
+    </a>
+
+    <!-- GOLD TEXT - EXPLICIT COLOR -->
+    <div style="text-align: center;">
+      <span style="color: #B48F4C; font-size: 28px; font-weight: bold; font-family: 'Cormorant Garamond', serif;">
+        GOLD SHINE 
+        <span style="color: #D4AF6A;">JEWELRY</span>
+      </span>
+    </div>
+
+    <ul style="display: flex; gap: 25px; list-style: none; margin: 0; padding: 0;">
+      <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+      <li><a href="about.html" style="color: white; text-decoration: none;">About Us</a></li>
+      <li><a href="collections.html" style="color: white; text-decoration: none;">Collections</a></li>
+      <li><a href="products.html" style="color: white; text-decoration: none;">Products</a></li>
+      <li><a href="gallery.html" style="color: white; text-decoration: none;">Gallery</a></li>
+      <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  @media (max-width: 768px) {
+    nav > div { flex-direction: column; gap: 15px; }
+    nav ul { flex-wrap: wrap; justify-content: center; }
+    nav div span { font-size: 22px !important; }
+  }
+  nav ul li a:hover { color: #B48F4C !important; }
+</style>

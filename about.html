@@ -1,0 +1,318 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Gold Shine Jewelry</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Centered About Content Styles */
+        .about-centered {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about-centered h2 {
+            color: var(--gold);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .about-centered h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+        
+        .about-centered h3 {
+            color: var(--gold-light);
+            font-size: 1.6rem;
+            margin: 40px 0 20px;
+        }
+        
+        .about-centered p {
+            color: #ccc;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+        
+        .about-centered .address-box {
+            background: var(--black-card);
+            padding: 25px;
+            border-radius: 16px;
+            margin-top: 30px;
+            border: 1px solid rgba(180, 143, 76, 0.2);
+        }
+        
+        .about-centered .address-box i {
+            color: var(--gold);
+            margin-right: 10px;
+        }
+        
+        .about-centered .address-box p {
+            margin-bottom: 10px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .stat-card {
+            padding: 30px;
+            background: var(--black-card);
+            border-radius: 20px;
+            border: 1px solid rgba(180, 143, 76, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--gold);
+            font-weight: 700;
+            display: block;
+        }
+        
+        .stat-label {
+            color: #aaa;
+        }
+        
+        /* Showroom Section */
+        .showroom-section {
+            padding: 60px 0;
+        }
+        
+        .showroom-image {
+            margin-bottom: 40px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .showroom-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .showroom-image:hover img {
+            transform: scale(1.02);
+        }
+        
+        .showroom-info {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .showroom-info p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+        
+        .showroom-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            background: var(--black-card);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(180, 143, 76, 0.2);
+        }
+        
+        .showroom-detail {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #ddd;
+        }
+        
+        .showroom-detail i {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .showroom-details {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .about-centered h2 {
+                font-size: 1.8rem;
+            }
+            .about-centered h3 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="splash-screen" id="splashScreen"><div class="splash-logo"><div class="splash-text"><h1>GOLD SHINE</h1><p>JEWELRY</p><small>GOLD & DIAMONDS</small></div></div><div class="spinner"></div></div>
+    <div class="main-content" id="mainContent">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo-area">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" height="40" alt="Gold Shine Logo" onerror="this.style.display='none'">
+                        <span class="brand-name-text">GOLD SHINE <span>JEWELRY</span></span>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+
+        <section class="page-header">
+            <div class="container">
+                <h1>About Gold Shine Jewelry</h1>
+                <p>Tradition meets timeless elegance</p>
+            </div>
+        </section>
+
+        <!-- Centered Our Heritage & Our Boutique Section -->
+        <section class="container">
+            <div class="about-centered" data-aos="fade-up">
+                <h2>Our Heritage</h2>
+                <p>Established in 2010, Gold Shine Jewelry has become synonymous with trust, craftsmanship, and timeless elegance. Each piece is a narrative of artistry — from the finest gold to ethically sourced diamonds.</p>
+                <p>We blend traditional Kundan, Polki with contemporary minimalism, making every jewel a heirloom to be cherished for generations.</p>
+                
+                <h3>Our Boutique</h3>
+                <p>Located in the heart of HBR Layout, Bengaluru, we invite you to experience the brilliance of our exclusive collections in person. Our showroom is designed to provide a luxurious and comfortable shopping experience.</p>
+                
+                <div class="address-box">
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Visit Us:</strong> No.210/4, samad complex, 80 Feet Rd, next to core computer care, 3rd Block, HBR Layout, Bengaluru, Karnataka 560043</p>
+                    <p><i class="fas fa-clock"></i> <strong>Store Hours:</strong> Open daily: 10:30 AM – 8:30 PM | Sunday: 11 AM – 6 PM</p>
+                    <p><i class="fas fa-phone-alt"></i> <strong>Call Us:</strong> +91 80 1234 5678</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="container">
+            <div class="stats-grid" data-aos="fade-up">
+                <div class="stat-card">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Years of Excellence</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">5000+</span>
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Hallmarked Jewellery</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Showroom Section with Image -->
+        <section class="container showroom-section" data-aos="fade-up">
+            <h2 class="section-title">Our Showroom</h2>
+            <div class="showroom-image">
+                <img src="assets/images/products/shop.jpg" alt="Gold Shine Jewelry Showroom" onerror="this.src='https://placehold.co/1200x600/1e1e1e/B48F4C?text=Our+Showroom'">
+            </div>
+            <div class="showroom-info">
+                <p>Visit our exquisite showroom to experience the brilliance of our collections in person. Our expert consultants are here to help you find the perfect piece for every occasion.</p>
+                <div class="showroom-details">
+                    <div class="showroom-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>No.210/4, samad complex, 80 Feet Rd, HBR Layout, Bengaluru</span>
+                    </div>
+                    <div class="showroom-detail">
+                        <i class="fas fa-clock"></i>
+                        <span>Open daily: 10:30 AM – 8:30 PM | Sunday: 11 AM – 6 PM</span>
+                    </div>
+                    <div class="showroom-detail">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91 80 1234 5678</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <a href="https://wa.me/8147128889" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <h4>Gold Shine Jewelry</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> No.210/4, samad complex, 80 Feet Rd, next to core computer care, 3rd Block, HBR Layout, Bengaluru, Karnataka 560043</p>
+                        <p><i class="fas fa-phone-alt"></i> +91 80 1234 5678</p>
+                        <p><i class="fas fa-envelope"></i> shine@goldshine.com</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <p><a href="about.html">About Us</a></p>
+                        <p><a href="collections.html">Collections</a></p>
+                        <p><a href="gallery.html">Gallery</a></p>
+                        <p><a href="contact.html">Contact</a></p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Policies</h4>
+                        <p><a href="privacy.html">Privacy Policy</a></p>
+                        <p><a href="terms.html">Terms & Conditions</a></p>
+                        <p><a href="shipping.html">Shipping Policy</a></p>
+                        <p><a href="refund.html">Refund Policy</a></p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Store Hours</h4>
+                        <p>Open daily: 10:30 AM – 8:30 PM</p>
+                        <p>Sunday: 11 AM – 6 PM</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">© 2025 Gold Shine Jewelry – Timeless Elegance</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>
